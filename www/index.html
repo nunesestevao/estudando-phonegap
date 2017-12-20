@@ -14,17 +14,16 @@
 	<script src="assets/js/angular-route.js"></script>
 	<script type="text/javascript" src="app/app.js"></script>
 
+	<!-- CONTROLLERS -->
 	<script type="text/javascript" src="app/controllers/barraCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/loginCtrl.js"></script>
+	<script type="text/javascript" src="app/controllers/homeCtrl.js"></script>
 </head>
 <body>
 	<script type="text/javascript" src="cordova.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded barradecima" ng-controller="barraCtrl">
-		<a  href="#/" ng-show="mostrarVoltar" class="fa fa-chevron-left" aria-hidden="true"></a>
-		<a class="navbar-brand" href="#">Corleone's Pizza & Burguer</a>
-	</nav>
 	<div ng-view></div> 
 </body>
 </html>
