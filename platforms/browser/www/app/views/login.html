@@ -8,21 +8,32 @@
 	</div>
 	<div class="row justify-content-md-center">
 		<div class="col">
+			<div ng-show="mostraErro" class="alert alert-danger alert-dismissible fade show" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4>Opa!</h4>
+				<p>Alguma coisa está errada, reveja seus dados!</p>
+			</div>		
+		</div>
+	</div>
+	<div class="row justify-content-md-center">
+		<div class="col">
 			<form style="margin-top: 15px">
 				<div class="form-group">
-					<input type="tel" class="form-control" placeholder="999999999" ng-model="login.usuario">
+					<input type="tel" class="form-control" placeholder="999999999" ng-model="user.usuario">
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" placeholder="********" ng-model="login.senha">
+					<input type="password" class="form-control" placeholder="********" ng-model="user.senha">
 				</div>
 				<div class="form-check">
 					<label class="form-check-label">
-						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" ng-model="login.conectado">
+						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" ng-model="user.conectado">
 						Manter Conectado
 					</label>
 				</div>
 				<div class="form-group">
-					<button class="btn btn-secondary btn-block" ng-disabled="!login.usuario || !login.senha" ng-click="login()">Entrar</button>
+					<button class="btn btn-secondary btn-block" ng-disabled="!user.usuario || !user.senha" ng-click="login()">Entrar</button>
 				</div>
 				<div class="form-group">
 					<a href="#/cadastrese" class="btn btn-secondary btn-block">Cadastre-se</a>

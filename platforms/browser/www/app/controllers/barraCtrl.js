@@ -1,16 +1,21 @@
 "USE STRICT";
 app.controller("barraCtrl", function($scope, $location){
 	$scope.mostrarVoltar = false;
-	$scope.mostrarDireita = false;
+	$scope.mostrarLigar = false;
 
 	$scope.mostra = function(){
-		if($location.path() != '/'){
-			$scope.mostrarVoltar = true;
-			$scope.mostrarDireita = false;
-		}else{
-			$scope.mostrarVoltar = false;
-			$scope.mostrarDireita = true;
+	
+		switch($location.path()) {
+			case '/':
+				$scope.mostrarVoltar = false;
+				$scope.mostrarLigar = true;
+			break;
+			case '/cadastrese':
+				$scope.mostrarVoltar = true;
+				$scope.mostrarLigar = false;
+			break;
 		}
+
 	}
 
 	$scope.trataVoltar = function(){
@@ -18,9 +23,6 @@ app.controller("barraCtrl", function($scope, $location){
 			case '/cadastrese':
 				$location.path('/');
 			break;
-			case '/home':
-				$location.path('/');
-			break;
-		} 
+		}
 	}
 });
