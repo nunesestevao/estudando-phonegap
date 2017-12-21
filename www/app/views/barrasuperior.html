@@ -1,7 +1,23 @@
 <nav ng-init="mostra()" class="navbar navbar-toggleable-md navbar-light bg-faded barradecima" ng-controller="barraCtrl">
+	<button ng-show="mostrarMenu" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 	<div class="navbar-brand">
 		<i style="margin-top:5px;" ng-show="mostrarVoltar" class="fa fa-chevron-left d-inline-block align-top" aria-hidden="true" ng-click="trataVoltar()"></i>
 		Corleone's Pizza & Burguer
-		<a href="tel:35322362" style="color:#FFF;" ng-show="mostrarLigar" class="fa fa-phone" aria-hidden="true"></a>
+		<a href="tel:35322362" style="color:#FFF;float: right;margin-top: -23px;" ng-show="mostrarLigar" class="fa fa-phone" aria-hidden="true"></a>
+	</div>
+	<div ng-show="mostrarMenu" class="collapse navbar-collapse" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Features</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Pricing</a>
+			</li>
+		</ul>
 	</div>
 </nav>
